@@ -1,0 +1,20 @@
+{
+  "name": "rest-api",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "npm run doc-gen & nodemon --experimental-json-modules app.js",
+    "doc-gen": "node app.js"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "debug": "^2.6.9",
+    "express": "^4.17.1",
+    "json-server": "^0.17.0",
+    "morgan": "^1.10.0",
+    "msql": "^1.0.3",
+    "nodemon": "^2.0.15"
+  }
+}
