@@ -3,10 +3,16 @@ import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import cors from 'cors';
 
+
 import moviesRouter from './router/movies-router.js';
 import rentsRouter from './router/rents-router.js';
 
+
+
+
 const app = express();
+
+
 
 app.use(logger('dev'));
 app.use(express.json());

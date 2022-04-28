@@ -1,38 +1,34 @@
-const movies = [
-    {
-        "id": 10002,
-        "name": "die hard",
-        "year": "1999",
-        "genre": "action",
-        "income": 10000000
-    },
-    {
-        "id": 10003,
-        "name": "Yesil Yol",
-        "year": "2003",
-        "genre": "drama",
-        "income": 20000000
-    },
-    {
-        "id": 10004,
-        "name": "Esref Pasalilar",
-        "year": "2010",
-        "genre": "komedi",
-        "income": 1000000
-    }
-]
+import mysql from "mysql"
+
+var db_data = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "-",
+  database:"movielist"
+});
+
+db_data.connect(function(err) {
+  if (err) throw err;
+  var sql = "SELECT * FROM movie_properties";
+  db_data.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log(result);
+  });
+}); 
+  
+
 
 export function createMovie(pMovie) {
-    movies.push(pMovie);
+  result.push(pMovie);
     return pMovie;
 }
 
 export function getAllMovies() {
-    return movies;
+    return result;
 }
 
 export function getMovieById(pId) {
-    const movie = movies.find(m => m.id == pId);
+    const movie = result.find(m => m.id == pId);
     return movie;
 }
 
@@ -45,5 +41,5 @@ export function updateMovie(pId, pUpdateMovie) {
 }
 
 export function deleteMovie(pId) {
-    movies = movies.filter(m => m.id != pId)
+  result = result.filter(m => m.id != pId)
 }

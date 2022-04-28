@@ -1,0 +1,11 @@
+[0;1;31m●[0m mysql.service
+     Loaded: [0;1;31mnot-found[0m (Reason: Unit mysql.service not found.)
+     Active: [0;1;31mfailed[0m (Result: exit-code) since Tue 2022-04-26 12:35:26 CEST; 13min ago
+   Main PID: 10055 (code=exited, status=1/FAILURE)
+     Status: "Server startup in progress"
+
+Apr 26 12:33:45 ck systemd[1]: Starting MySQL Community Server...
+Apr 26 12:33:45 ck mysql-systemd-start[10054]: AppArmor parser error for /etc/apparmor.d/usr.sbin.mysqld in /etc/apparmor.d/usr.sbin.mysqld at line 7: 'abstractions/mysql' a??lamad?
+Apr 26 12:35:26 ck systemd[1]: [0;1;39m[0;1;31m[0;1;39mmysql.service: Main process exited, code=exited, status=1/FAILURE[0m
+Apr 26 12:35:26 ck systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mmysql.service: Failed with result 'exit-code'.[0m
+Apr 26 12:35:26 ck systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start MySQL Community Server.[0m
