@@ -8,5 +8,5 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use('/rents', rentsRouter);
 app.use('/movies', moviesRouter);
-const PORT = 8080
-app.listen(PORT, ()=>console.log(`${PORT} has been started`));
+const PORT = 5000
+app.listen(PORT, ()=>console.log(`${PORT} has worked`));

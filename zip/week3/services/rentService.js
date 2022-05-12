@@ -1,19 +1,10 @@
-let personList = [
+const personList = [
     {
-        "id":1,
         "movieId": 10002,
         "duration": 10,
-        "person": "Hi Coders",
-        "name":'second best movie'
-    },
-    {
-        "id":2,
-        "movieId": 2,
-        "duration": 10,
-        "person": "Hi Coders",
-        "name":'second worst movie'
-    }  
-];
+        "person": "Hi Coders"
+    }
+]
 const deleteRent = (pId) => personList = personList.filter(m => m.id !=pId)
 const getRents = () =>  personList
 const getRentByID = (rentId) =>  personList.filter((pId) => pId.id  == rentId)
